@@ -5,7 +5,7 @@ const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
 
 exports.alltt_get = asyncHandler(async (req, res, next) => {
-  const allTopTimes = await TopTime.find().exec();
+  const allTopTimes = await TopTime.find().populate("game").exec();
   return res.json({ toptimes: allTopTimes }); 
 });
 
