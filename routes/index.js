@@ -12,5 +12,7 @@ router.post("/check", character_controller.check_post);
 
 router.post("/toptime", toptime_controller.newtt_post);
 
+router.get("/toptime", toptime_controller.alltt_get);
+
 
 module.exports = router;

@@ -4,6 +4,11 @@ const TopTime = require("../models/TopTime");
 const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
 
+exports.alltt_get = asyncHandler(async (req, res, next) => {
+  const allTopTimes = await TopTime.find().exec();
+  return res.json({ toptimes: allTopTimes }); 
+});
+
 
 exports.newtt_post = [
   body("username", "Username must be between 1 - 20 characters")
