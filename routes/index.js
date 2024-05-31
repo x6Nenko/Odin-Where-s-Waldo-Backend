@@ -14,5 +14,9 @@ router.post("/toptime", toptime_controller.newtt_post);
 
 router.get("/toptime", toptime_controller.alltt_get);
 
+router.get("/start", toptime_controller.start_timer);
+
+router.get("/end", toptime_controller.end_timer);
+
 
 module.exports = router;
