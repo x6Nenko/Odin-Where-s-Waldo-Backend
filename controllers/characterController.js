@@ -27,3 +27,7 @@ exports.check_post = asyncHandler(async (req, res, next) => {
   };
 
 });
+
+exports.wakeup_get = asyncHandler(async (req, res, next) => {
+  return res.json({ msg: true });
+});

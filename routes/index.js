@@ -18,5 +18,7 @@ router.get("/start", toptime_controller.start_timer);
 
 router.get("/end", toptime_controller.end_timer);
 
+router.get("/wakeup", character_controller.wakeup_get);
+
 
 module.exports = router;
